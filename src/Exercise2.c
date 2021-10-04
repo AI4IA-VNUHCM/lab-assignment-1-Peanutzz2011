@@ -30,9 +30,9 @@ int main(int argc, char *argv[]) {
     int min = testcase[0];
     int currentIndex = 0;
     while (testcase[currentIndex] != 0) {
-        printf("%d\n", testcase[currentIndex]);
-        printf("max now %d\n", max);
-        printf("min now %d\n", min);
+        // printf("%d\n", testcase[currentIndex]);
+        // printf("max now %d\n", max);
+        // printf("min now %d\n", min);
         int currentValue = testcase[currentIndex];
         if (currentValue > max) {
             max = currentValue;
