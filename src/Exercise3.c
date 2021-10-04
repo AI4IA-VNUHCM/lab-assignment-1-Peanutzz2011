@@ -21,6 +21,8 @@ bool isPrime(int n) {
     }
     int k = 2;
     int p = 1;
+    primeTable[0] = false;
+    primeTable[1] = false;
     primeTable[2] = true;
     while (k <= n) {
         if (!primeTable[k]) {
