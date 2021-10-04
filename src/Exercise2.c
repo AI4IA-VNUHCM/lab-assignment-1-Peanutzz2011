@@ -26,11 +26,11 @@ int main(int argc, char *argv[]) {
 						
     }
     //Your codes here
-    int max = testcase[0];
-    int min = testcase[0];
-    int currentIndex = 0;
+    unsigned int max = testcase[0];
+    unsigned int min = testcase[0];
+    unsigned int currentIndex = 0;
     while (testcase[currentIndex] != 0) {
-        int currentValue = testcase[currentIndex];
+        unsigned int currentValue = testcase[currentIndex];
         if (max < currentValue) {
             max = currentValue;
         }
