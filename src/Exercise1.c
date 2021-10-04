@@ -13,9 +13,16 @@ Ex:
 #include <math.h>
 
 int main(int argc, char *argv[]) {
-	//testing variable, applying it to your algorithm for auto-evaluating
-	int testcase = atoi(argv[1]);
-	//Your codes here
-	
-	return 0;
+    //testing variable, applying it to your algorithm for auto-evaluating
+    int testcase = atoi(argv[1]);
+    //Your codes here
+    int leftover = testcase;
+    int temp = 1;
+    while (leftover > 0) {
+        int k = (leftover/temp)%10;
+        printf("%d ", k);
+        
+        leftover /= 10;
+    }
+    return 0;
 }

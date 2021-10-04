@@ -14,18 +14,32 @@ Ex:
 #include <math.h>
 
 int main(int argc, char *argv[]) {
-	//testing variable, applying it to your algorithm for auto-evaluating
-	argc--;
-	int testcase[argc],i;
-	for(i=0; i<argc;i++){
-		if(atoi(argv[i+1])==0){
-			argc = i;
-			break;
-		}
-		else
-			testcase[i] = atoi(argv[i+1]);
-	}
-	//Your codes here
-
-	return 0;
+    //testing variable, applying it to your algorithm for auto-evaluating
+    argc--;
+    int testcase[argc], i;
+    for (i = 0; i < argc; i++) {
+        if (atoi(argv[i + 1]) == 0) {
+            argc = i;
+            break;
+        } else
+            testcase[i] = atoi(argv[i + 1]);
+						
+    }
+    //Your codes here
+    int max = testcase[0];
+    int min = testcase[0];
+    int currentIndex = 0;
+    while (testcase[currentIndex] != 0) {
+        int currentValue = testcase[currentIndex];
+        if (max < currentValue) {
+            max = currentValue;
+        }
+        if (min > currentValue) {
+            min = currentValue;
+        }
+        currentIndex++;
+    }
+    printf("Max: %d\n", max);
+    printf("Min: %d", min);
+    return 0;
 }
