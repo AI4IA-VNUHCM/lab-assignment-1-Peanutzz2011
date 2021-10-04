@@ -26,15 +26,18 @@ int main(int argc, char *argv[]) {
 						
     }
     //Your codes here
-    unsigned int max = testcase[0];
-    unsigned int min = testcase[0];
-    unsigned int currentIndex = 0;
+    int max = testcase[0];
+    int min = testcase[0];
+    int currentIndex = 0;
     while (testcase[currentIndex] != 0) {
-        unsigned int currentValue = testcase[currentIndex];
-        if (max < currentValue) {
+        printf("%d\n", testcase[currentIndex]);
+        printf("max now %d\n", max);
+        printf("min now %d\n", min);
+        int currentValue = testcase[currentIndex];
+        if (currentValue > max) {
             max = currentValue;
         }
-        if (min > currentValue) {
+        if (currentValue < min) {
             min = currentValue;
         }
         currentIndex++;
